@@ -47,6 +47,13 @@ For convenience, you can download them with the following script: (under this re
   You may ignore the camera poses as they are assumed unknown in this case, which we simply set to zero vectors.
 
 
+- #### <span style="color:red">Strayscanner</span>
+    Both the Bl  (strayscanner)[https://docs.strayrobots.io/]
+  If you want to try BARF on your own sequence, we provide a template data file in `data/iphone.py`, which is an example to read from a sequence captured by an iPhone 12.
+  You should modify `get_image()` to read each image sample and set the raw image sizes (`self.raw_H`, `self.raw_W`) and focal length (`self.focal`) according to your camera specs.  
+  You may ignore the camera poses as they are assumed unknown in this case, which we simply set to zero vectors.
+
+
 #### BARF DATA
 - ios_logger frame [right,up,backward]
 - BARF 각 데이터.py 하단에 parse_raw_camera() 거치면 [right,down,forward]로 바꿈. 
