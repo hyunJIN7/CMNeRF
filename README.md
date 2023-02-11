@@ -75,6 +75,7 @@ Note: if you use this data format, make sure your `dataset_type` in the config f
   - No positional encoding: add `--arch.posenc!`.
   - `--group=iphone` is a group that that does not use pose information in the data of the strayscanner.
   - If you want to evaluate a checkpoint at a specific iteration number, use `--resume=<ITER_NUMBER>` instead of just `--resume`.
+  - iphone 그룹은 초기 포즈를 identity로 설정한 것으로 strayscanner 그룹과 같은 데이터를 사용한다.
 
   A video `vis.mp4` will also be created to visualize the optimization process.
   
