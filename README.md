@@ -24,4 +24,8 @@ MINE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 ```
 
+### Acknowledgements
+We thank [BARF]([https://github.com/yenchenlin/nerf-pytorch](https://github.com/chenhsuanlin/bundle-adjusting-NeRF)), from which this repository borrows code. 
+
+
 Please contact me (yunjingong731@gmail.com) if you have any questions!
