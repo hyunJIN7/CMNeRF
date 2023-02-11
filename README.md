@@ -25,6 +25,7 @@ MINE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ```
 
 ### Acknowledgements
+This code borrows heavily from [BARF](https://github.com/chenhsuanlin/bundle-adjusting-NeRF).
 We thank [BARF](https://github.com/chenhsuanlin/bundle-adjusting-NeRF), from which this repository borrows code. 
 
 
