@@ -44,21 +44,10 @@ Note: if you use this data format, make sure your `dataset_type` in the config f
 
 ### Running the code
 
-- #### BARF models
-  To train and evaluate BARF:
+- #### CMNeRF models
+  To train and evaluate CMNeRF:
   ```bash
   # <GROUP> and <NAME> can be set to your likes, while <SCENE> is specific to datasets
-  
-  # Blender (<SCENE>={chair,drums,ficus,hotdog,lego,materials,mic,ship})
-  python3 train.py --group=<GROUP> --model=barf --yaml=barf_blender --name=<NAME> --data.scene=<SCENE> --barf_c2f=[0.1,0.5]
-  python3 evaluate.py --group=<GROUP> --model=barf --yaml=barf_blender --name=<NAME> --data.scene=<SCENE> --data.val_sub= --resume
-  python3 train.py --group=blender --model=barf --yaml=barf_blender --name=result_lego --data.scene=lego --barf_c2f=[0.1,0.5]
-  python3 evaluate.py --group=blender --model=barf --yaml=barf_blender --name=result_lego --data.scene=lego --data.val_sub= --resume
-  
-  # LLFF (<SCENE>={fern,flower,fortress,horns,leaves,orchids,room,trex})
-  python3 train.py --group=<GROUP> --model=barf --yaml=barf_llff --name=<NAME> --data.scene=<SCENE> --barf_c2f=[0.1,0.5]
-  python3 evaluate.py --group=<GROUP> --model=barf --yaml=barf_llff --name=<NAME> --data.scene=<SCENE> --resume
-  
     #strayscanner
   python3 train.py --group=strayscanner --model=barf --yaml=barf_strayscanner --name=result_chair --data.scene=chair  --barf_c2f=[0.1,0.5] --depth.use_depth=true --depth.use_depth_loss=true 
   python3 evaluate.py --group=strayscanner --model=barf --yaml=barf_strayscanner --name=result_chair --data.scene=chair  --data.val_sub= --depth.use_depth=true --depth.use_depth_loss=true 
@@ -78,7 +67,6 @@ Note: if you use this data format, make sure your `dataset_type` in the config f
   - iphone 그룹은 초기 포즈를 identity로 설정한 것으로 strayscanner 그룹과 같은 데이터를 사용한다.
 
   A video `vis.mp4` will also be created to visualize the optimization process.
-  
   
 --------------------------------------
 ### Codebase structure
