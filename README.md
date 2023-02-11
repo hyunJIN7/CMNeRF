@@ -94,6 +94,21 @@ python data/process_strayscanner_data_image_resize.py --basedir ./data/strayscan
   - If you want to evaluate a checkpoint at a specific iteration number, use `--resume=<ITER_NUMBER>` instead of just `--resume`.
 
   A video `vis.mp4` will also be created to visualize the optimization process.
+  
+  
+--------------------------------------
+### Codebase structure
+
+The main engine and network architecture in `model/barf.py` inherit those from `model/nerf.py`.
+This codebase is structured so that it is easy to understand the actual parts BARF is extending from NeRF. 
+(This code cannot be used to train origin NeRF.)
+  
+Some tips on using and understanding the codebase:
+- The computation graph for forward/backprop is stored in `var` throughout the codebase.
+- The losses are stored in `loss`. To add a new loss function, just implement it in `compute_loss()` and add its weight to `opt.loss_weight.<name>`. It will automatically be added to the overall loss and logged to Tensorboard.
+- If you are using a multi-GPU machine, you can add `--gpu=<gpu_number>` to specify which GPU to use. Multi-GPU training/evaluation is currently not supported.
+- To resume from a previous checkpoint, add `--resume=<ITER_NUMBER>`, or just `--resume` to resume from the latest checkpoint.
+- (to be continued....)
 --------------------------------------
 
 If you find our code useful for your research, please cite
