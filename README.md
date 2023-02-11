@@ -48,16 +48,14 @@ Note: if you use this data format, make sure your `dataset_type` in the config f
 
 
 - #### <span style="color:red">Strayscanner</span>
-    Acquire data using (Strayscanner)[https://docs.strayrobots.io/].
+    Acquire data using [Strayscanner](https://docs.strayrobots.io/).
   
 To generate the train/test data:
 ```
 python data/process_strayscanner_data_image_resize.py --basedir <your_scenedir>
 python data/process_strayscanner_data_image_resize.py --basedir ./data/strayscanner/chair 
 ```
-
 --------------------------------------
-
 
 ### Running the code
 
